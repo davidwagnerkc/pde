@@ -6,6 +6,8 @@ Use `quarto preview pde-refiner.ipynb` to preview the Reveal.js slides in a brow
 
 # PDE-Refiner Repro
 
+Notes on attempt to reproduce PDE-Refiner for Kuramoto-Sivashinsky. Was not able to reproduce > 90s rollout with > 0.8 correlation, but this is a start.
+
 ### Generate Training Data
 
 To generate the data download this repo and install the conda environment: https://github.com/brandstetter-johannes/LPSDA
@@ -36,7 +38,7 @@ Can use `evaluation.ipynb` to save ground truth and inference tensors to disk th
 
 For testing add this diff to pdearena to force using the train dataset for testing (they use 140 for training and the rest of the trajectory for test).
 
-``
+```
              with h5py.File(path, "r") as f:
 -                data_h5 = f[self.mode]
 +                data_h5 = f["train"] # f[self.mode]

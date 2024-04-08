@@ -1,5 +1,9 @@
 Collection of various PDE related work. 
 
+# PDE-Refiner Slides
+
+Use `quarto preview pde-refiner.ipynb` to preview the Reveal.js slides in a browser window while making changes.
+
 # PDE-Refiner Repro
 
 ### Generate Training Data

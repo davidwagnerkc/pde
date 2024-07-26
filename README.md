@@ -16,6 +16,14 @@ Then run `./generate-ks.sh`. This takes 3 days to run on a M2 Pro. Then make a c
 
 ### Training
 
+```
+git clone git@github.com:pdearena/pdearena.git
+cd pdearena
+time conda env create --name pdearena --file docker/environment.yml --solver=libmamba
+conda activate pdearena
+pip install -e .
+```
+
 Download https://github.com/pdearena/pdearena, install the conda environement inside of `docker/` then add this to training config for Kuramoto-Sivashinsky so we get checkpoints:
 ```
 +    - class_path: pytorch_lightning.callbacks.ModelCheckpoint

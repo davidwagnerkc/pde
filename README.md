@@ -23,6 +23,8 @@ time conda env create --name pdearena --file docker/environment.yml --solver=lib
 conda activate pdearena
 pip install -e .
 pip install git+https://github.com/microsoft/cliffordlayers.git
+conda uninstall torchdata --solver=libmamba
+pip install torchdata==0.4 --no-deps
 ```
 
 Download https://github.com/pdearena/pdearena, install the conda environement inside of `docker/` then add this to training config for Kuramoto-Sivashinsky so we get checkpoints:

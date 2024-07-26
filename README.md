@@ -22,6 +22,7 @@ cd pdearena
 time conda env create --name pdearena --file docker/environment.yml --solver=libmamba
 conda activate pdearena
 pip install -e .
+pip install git+https://github.com/microsoft/cliffordlayers.git
 ```
 
 Download https://github.com/pdearena/pdearena, install the conda environement inside of `docker/` then add this to training config for Kuramoto-Sivashinsky so we get checkpoints:
